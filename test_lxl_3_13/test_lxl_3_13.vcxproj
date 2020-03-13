@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3942696B-B44C-4D5D-8CE0-0CBEB7A0938C}</ProjectGuid>
-    <RootNamespace>test_lxl_3_11</RootNamespace>
+    <ProjectGuid>{A0018D1A-BB4A-41E1-8805-1EEF2A5D206F}</ProjectGuid>
+    <RootNamespace>test_lxl_3_13</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -119,7 +119,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="add.c" />
     <ClCompile Include="test.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
