@@ -50,16 +50,67 @@ void SetMine(char mine[ROWS][COLS], int row, int col)
 		}
 	}
 }
-int GetMineCount(char mine[ROWS][COLS],int x,int y)
+int GetMineCount(char mine[ROWS][COLS], int x, int y)
 {
 	return (mine[x - 1][y] +
-		mine[x - 1][-1] +
+		mine[x - 1][y-1] +
 		mine[x][y - 1] +
 		mine[x + 1][y - 1] +
 		mine[x + 1][y] +
 		mine[x + 1][y + 1] +
 		mine[x][y + 1] +
 		mine[x - 1][y + 1] - 8 * '0');
+}
+//void OpenRound(char mine[ROWS][COLS],char show[ROWS][COLS],int row,int col,int x,int y,int win)
+//{
+//	//对坐标周围8个坐标各自周围的8个坐标进行找雷判断
+//	int i = 0;
+//	int j = 0;
+//	for (i = x - 1; i <= x + 1;i++)
+//	{
+//		for (j = y - 1; j <= y + 1;j++)
+//		{
+//			if (GetMineCount(mine, i, j)==0)
+//			{
+//				int m = 0;
+//				int n = 0;
+//				for (m = i - 1; m <= i + 1; i++)
+//				{
+//					for (n = j - 1; j <= j + 1;j++)
+//					{
+//						show[m][n] = '0';
+//						//win++;
+//						//OpenRound(mine, show, ROW, COL, m, n, win);
+//					}
+//				}
+//			}
+//			else
+//				show[i][j] = GetMineCount(mine, i, j)+'0';
+//		}
+//	}
+//}
+
+void OpenRound(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col, int x, int y, int win)
+{
+	int i = 0;
+	int j = 0;
+	for (i = x - 1; i <= x + 1; i++)
+	{
+		for (j = y - 1; j <= y + 1; j++)
+		{
+			if (i >= 1 && i <= row && j >= 1 && j <= col)
+			{
+				if (GetMineCount(mine, i, j) == 0)
+				{
+					OpenRound(mine, show, row, col, i, j, win);
+					show[i][j] = '0';
+					win++;
+				}
+				else
+					show[i][j] = GetMineCount(mine, i, j) + '0';
+			}
+		}
+	}
 }
 void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 {
@@ -81,8 +132,17 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 			else
 			{
 				int count = GetMineCount(mine,x,y);
-				show[x][y] = count + '0';//放入该坐标周围雷的个数
-				system("cls");//打印前清除原本打印信息
+				
+				//判断一下count是否为0，是0则放入该坐标周围雷的个数后递归展开周围坐标，
+				//不是0则直接将count放入坐标内并显示show
+				if (count==0)
+				{
+					OpenRound(mine,show,row,col,x,y,win);
+					DisplayBoard(show, row, col);
+				}
+				else
+					show[x][y] = count + '0';//放入该坐标周围雷的个数
+				//system("cls");//打印前清除原本打印信息
 				DisplayBoard(show, row, col);
 				win++;
 			}
