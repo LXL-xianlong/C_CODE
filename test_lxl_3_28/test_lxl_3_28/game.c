@@ -61,57 +61,74 @@ int GetMineCount(char mine[ROWS][COLS], int x, int y)
 		mine[x][y + 1] +
 		mine[x - 1][y + 1] - 8 * '0');
 }
-//void OpenRound(char mine[ROWS][COLS],char show[ROWS][COLS],int row,int col,int x,int y,int win)
+
+
+//void OpenRound(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col, int x, int y, int win)
 //{
-//	//对坐标周围8个坐标各自周围的8个坐标进行找雷判断
 //	int i = 0;
 //	int j = 0;
-//	for (i = x - 1; i <= x + 1;i++)
+//	for (i = x - 1; i <= x + 1; i++)
 //	{
-//		for (j = y - 1; j <= y + 1;j++)
+//		for (j = y - 1; j <= y + 1; j++)
 //		{
-//			if (GetMineCount(mine, i, j)==0)
+//			if (i >= 1 && i <= row && j >= 1 && j <= col)
 //			{
-//				int m = 0;
-//				int n = 0;
-//				for (m = i - 1; m <= i + 1; i++)
+//				if (GetMineCount(mine, i, j) == 0)
 //				{
-//					for (n = j - 1; j <= j + 1;j++)
-//					{
-//						show[m][n] = '0';
-//						//win++;
-//						//OpenRound(mine, show, ROW, COL, m, n, win);
-//					}
+//					OpenRound(mine, show, row, col, i, j, win);
+//					show[i][j] = '0';
+//					win++;
 //				}
+//				else
+//					show[i][j] = GetMineCount(mine, i, j) + '0';
 //			}
-//			else
-//				show[i][j] = GetMineCount(mine, i, j)+'0';
 //		}
 //	}
 //}
-
-void OpenRound(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col, int x, int y, int win)
+void  OpenRound(char mine[ROWS][COLS], char show[ROWS][COLS], int x, int y)//运用递归扩展周围
 {
-	int i = 0;
-	int j = 0;
-	for (i = x - 1; i <= x + 1; i++)
+	int n = 0;
+	n = GetMineCount(mine, x, y);
+	if (n == 0)//当该位置周围雷数为0时扩展
 	{
-		for (j = y - 1; j <= y + 1; j++)
+		show[x][y] = n + '0 ';
+		if (mine[x - 1][y] == '0')
 		{
-			if (i >= 1 && i <= row && j >= 1 && j <= col)
-			{
-				if (GetMineCount(mine, i, j) == 0)
-				{
-					OpenRound(mine, show, row, col, i, j, win);
-					show[i][j] = '0';
-					win++;
-				}
-				else
-					show[i][j] = GetMineCount(mine, i, j) + '0';
-			}
+			OpenRound(mine, show, x - 1, y);//递归
+		}
+		if (mine[x + 1][y] == '0')
+		{
+			OpenRound(mine, show, x + 1, y);
+		}
+		if (mine[x][y + 1] == '0' )
+		{
+			OpenRound(mine, show, x, y + 1);
+		}
+		if (mine[x - 1][y + 1] == '0' )
+		{
+			OpenRound(mine, show, x - 1, y + 1);
+		}
+		if (mine[x + 1][y + 1] == '0')
+		{
+			OpenRound(mine, show, x + 1, y + 1);
+		}
+		if (mine[x][y - 1] == '0')
+		{
+			OpenRound(mine, show, x, y - 1);
+		}
+		if (mine[x + 1][y - 1] == '0')
+		{
+			OpenRound(mine, show, x + 1, y - 1);
+		}
+		if (mine[x - 1][y - 1] == '0')
+		{
+			OpenRound(mine, show, x - 1, y - 1);
 		}
 	}
+	else
+		show[x][y] = n + '0';
 }
+
 void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 {
 	int x = 0;
@@ -129,22 +146,20 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 				DisplayBoard(mine,row,col);
 				break;
 			}
-			else
+			else 
 			{
 				int count = GetMineCount(mine,x,y);
-				
-				//判断一下count是否为0，是0则放入该坐标周围雷的个数后递归展开周围坐标，
-				//不是0则直接将count放入坐标内并显示show
-				if (count==0)
+				//如果不是雷，但周围8个坐标中有雷，显示周围雷的个数
+				if (count!=0)
 				{
-					OpenRound(mine,show,row,col,x,y,win);
+					show[x][y] = count + '0';
 					DisplayBoard(show, row, col);
+					win++;
 				}
 				else
-					show[x][y] = count + '0';//放入该坐标周围雷的个数
-				//system("cls");//打印前清除原本打印信息
-				DisplayBoard(show, row, col);
-				win++;
+				{
+					OpenRound(mine,show,x,y);
+				}
 			}
 		}
 		else
