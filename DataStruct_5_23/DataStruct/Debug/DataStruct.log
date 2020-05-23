@@ -1,0 +1,33 @@
+﻿生成启动时间为 2020/5/19 18:09:49。
+     1>项目“H:\2020C C++学习\ClassCode\C_CODE\DataStruct_5_19\DataStruct\DataStruct.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
+         TestMain.c
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(45): warning C4013: “realloc”未定义；假设外部返回 int
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(57): warning C4013: “malloc”未定义；假设外部返回 int
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(59): warning C4013: “memset”未定义；假设外部返回 int
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(111): warning C4013: “free”未定义；假设外部返回 int
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(134): warning C4018: “<”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(165): warning C4018: “>”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(180): warning C4018: “<”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(182): warning C4018: “<”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(219): warning C4018: “>=”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(224): warning C4018: “<”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\seqlist.h(231): warning C4018: “<”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\stack.h(38): warning C4018: “>=”: 有符号/无符号不匹配
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\stack.h(83): warning C4033: “SeqStackTop”必须返回值
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\stack.h(169): warning C4033: “LinkStackTop”必须返回值
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\queue.h(70): warning C4033: “SeqQueueFront”必须返回值
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\queue.h(146): warning C4033: “CIRCLEQueueFront”必须返回值
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\stack.h(86): warning C4715: “SeqStackTop”: 不是所有的控件路径都返回值
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\stack.h(172): warning C4715: “LinkStackTop”: 不是所有的控件路径都返回值
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\queue.h(73): warning C4715: “SeqQueueFront”: 不是所有的控件路径都返回值
+     1>h:\2020c c++学习\classcode\c_code\datastruct_5_19\datastruct\queue.h(149): warning C4715: “CIRCLEQueueFront”: 不是所有的控件路径都返回值
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\2020C C++学习\ClassCode\C_CODE\DataStruct_5_19\Debug\DataStruct.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"H:\2020C C++学习\ClassCode\C_CODE\DataStruct_5_19\Debug\DataStruct.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\2020C C++学习\ClassCode\C_CODE\DataStruct_5_19\Debug\DataStruct.lib" /MACHINE:X86 Debug\TestMain.obj
+         DataStruct.vcxproj -> H:\2020C C++学习\ClassCode\C_CODE\DataStruct_5_19\Debug\DataStruct.exe
+     1>已完成生成项目“H:\2020C C++学习\ClassCode\C_CODE\DataStruct_5_19\DataStruct\DataStruct.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:01.17
