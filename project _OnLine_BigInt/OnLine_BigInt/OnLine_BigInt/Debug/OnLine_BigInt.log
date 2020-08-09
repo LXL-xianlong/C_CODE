@@ -1,0 +1,29 @@
+﻿生成启动时间为 2020/8/9 12:53:46。
+     1>项目“H:\2020C C++学习\ClassCode\C_plusplus\project _8_9\OnLine_BigInt\OnLine_BigInt\OnLine_BigInt.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt OnLineBigInt.cpp bigint.cpp
+         bigint.cpp
+     1>h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\bigint.cpp(26): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(227): warning C4018: “<=”: 有符号/无符号不匹配
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(226): note: 编译类 模板 成员函数“const unsigned char &SeqList<u_char>::operator [](int) const”时
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\bigint.cpp(42): note: 参见对正在编译的函数 模板 实例化“const unsigned char &SeqList<u_char>::operator [](int) const”的引用
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\bigint.h(73): note: 参见对正在编译的类 模板 实例化“SeqList<u_char>”的引用
+     1>h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(220): warning C4018: “<=”: 有符号/无符号不匹配
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(219): note: 编译类 模板 成员函数“unsigned char &SeqList<u_char>::operator [](int)”时
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\bigint.cpp(75): note: 参见对正在编译的函数 模板 实例化“unsigned char &SeqList<u_char>::operator [](int)”的引用
+     1>h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(73): warning C4101: “e”: 未引用的局部变量
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(67): note: 编译类 模板 成员函数“bool SeqList<u_char>::_Inc(void)”时
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(149): note: 参见对正在编译的函数 模板 实例化“bool SeqList<u_char>::_Inc(void)”的引用
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\seqlist.h(112): note: 编译类 模板 成员函数“SeqList<u_char>::SeqList(const SeqList<u_char> &)”时
+         h:\2020c c++学习\classcode\c_plusplus\project _8_9\online_bigint\online_bigint\bigint.cpp(384): note: 参见对正在编译的函数 模板 实例化“SeqList<u_char>::SeqList(const SeqList<u_char> &)”的引用
+         OnLineBigInt.cpp
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\2020C C++学习\ClassCode\C_plusplus\project _8_9\OnLine_BigInt\Debug\OnLine_BigInt.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"H:\2020C C++学习\ClassCode\C_plusplus\project _8_9\OnLine_BigInt\Debug\OnLine_BigInt.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\2020C C++学习\ClassCode\C_plusplus\project _8_9\OnLine_BigInt\Debug\OnLine_BigInt.lib" /MACHINE:X86 Debug\bigint.obj
+         Debug\OnLineBigInt.obj
+         OnLine_BigInt.vcxproj -> H:\2020C C++学习\ClassCode\C_plusplus\project _8_9\OnLine_BigInt\Debug\OnLine_BigInt.exe
+     1>已完成生成项目“H:\2020C C++学习\ClassCode\C_plusplus\project _8_9\OnLine_BigInt\OnLine_BigInt\OnLine_BigInt.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:03.48

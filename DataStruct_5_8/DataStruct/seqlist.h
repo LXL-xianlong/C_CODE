@@ -217,7 +217,7 @@ void SeqListDeleteByPos(SeqList *pst, int pos)
 	}
 	if (pos<0 || pos>=pst->size)
 	{
-		printf("要删除数据的位置非法,不能按位置插入.\n");
+		printf("要删除数据的位置非法,不能按位置删除.\n");
 		return;
 	}
 	for (int i = pos; i < pst->size; i++)

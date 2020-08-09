@@ -229,15 +229,15 @@ void DCListSort(DCList *plist)
 	}
 }
 //////////////////////////////////////////////////////////////////////////////////
-//无头单链表
-//定义单链表结点
+//无头单向非循环链表
+//定义无头单向非循环链表结点
 //typedef struct SListNode
 //{
 //	ElemType data;
 //	struct SListNode *next;
 //}SListNode;
 //
-////定义单链表结构
+////定义无头单向非循环链表结构
 //typedef struct SList
 //{
 //	SListNode *head;
